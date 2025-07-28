@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPC - The Treasure of Blockchain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="./imagem/logo-opc-2.png" type="image/x-icon">
+
+    <style>
+        @keyframes spin {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+
+        .logo-container {
+            perspective: 1000px;
+        }
+
+        .rotating-logo {
+            animation: spin 5s linear infinite;
+            transform-style: preserve-3d;
+        }
+
+        .logo-3d {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: spin 5s linear infinite;
+        }
+
+        .face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .frente {
+            transform: rotateY(0deg);
+        }
+
+        .verso {
+            transform: rotateY(180deg);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FFD700;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+        }
+
+        /* Hero logo grande */
+        .logo-giratoria {
+            perspective: 1000px;
+            width: 400px;
+            height: 400px;
+            margin: auto;
+        }
+
+        .logo-giratoria .logo-3d {
+            animation: spin 4s linear infinite;
+        }
+
+        /* Footer logo menor */
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="logo-container w-16 h-16">
+                        <div class="logo-3d">
+                            <img src="imagem/logo-opc.png" alt="Logo OPC" class="face frente" />
+                            <img src="imagem/logo-opc.png" alt="Logo OPC" class="face verso" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#tokenomics" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Tokenomics</a>
+                        <a href="#howtobuy" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">How to Buy</a>
+                        <a href="#disclaimer" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Disclaimer</a>
+                    </div>
+                </div>
+
+                <!-- Botão Telegram -->
+                <div class="hidden md:block">
+                    <div class="ml-4 flex items-center md:ml-6">
+                        <a href="https://t.me/+WKwVxvGnlq1kMDNh"
+                           class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md text-sm font-medium flex items-center">
+                            <i class="fab fa-telegram mr-2"></i> Join Community
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <!-- Texto Hero -->
+                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        <span class="block text-yellow-500">OPC</span>
+                        <span class="block text-gray-900">The Treasure of Blockchain</span>
+                    </h1>
+
+                    <p class="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        A community-driven meme coin inspired by the greatest treasure hunt in anime history. Created for believers, not speculators.
+                    </p>
+
+                    <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                        <p class="text-xl font-medium text-yellow-500 italic">
+                            "Those who believe first, sail the farthest."
+                        </p>
+
+                        <div class="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="https://pancakeswap.finance/swap?outputCurrency=0xSEU_CONTRATO"
+                               target="_blank" rel="noopener noreferrer"
+                               class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 md:py-4 md:text-lg md:px-10 transition duration-300">
+                                Buy Now
+                            </a>
+
+                            <a href="https://x.com/OPC_token"
+                               target="_blank" rel="noopener noreferrer"
+                               class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-yellow-600 bg-white border-yellow-500 hover:bg-gray-50 md:py-4 md:text-lg md:px-10 transition duration-300">
+                                Join Community
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logo Hero -->
+                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+                    <div class="relative mx-auto w-full rounded-lg lg:max-w-md">
+                        <div class="relative w-full h-96 flex items-center justify-center">
+                            <div class="logo-giratoria">
+                                <div class="logo-3d">
+                                    <img src="imagem/logo-opc.png" alt="Logo OPC" class="face frente" />
+                                    <img src="imagem/logo-opc.png" alt="Logo OPC" class="face verso" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About the Coin Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl">
+                    About OPC Coin
+                </h2>
+                <p class="mt-4 text-lg leading-7 text-gray-600">
+                    OPC is a meme coin inspired by One Piece, built for a passionate community of dreamers and believers. With no presale, no team allocation, and 100% of supply added to liquidity, OPC is truly for the people.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-gray-50 rounded-lg p-8 text-center shadow hover:shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <i class="fa-solid fa-coins text-yellow-500 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Fair Launch</h3>
+                    <p class="text-gray-600">
+                        No presale, no private sale. 100% of tokens are available for everyone from day one.
+                    </p>
+                </div>
+                <div class="feature-card bg-gray-50 rounded-lg p-8 text-center shadow hover:shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <i class="fa-solid fa-users text-yellow-500 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Community Driven</h3>
+                    <p class="text-gray-600">
+                        Decisions are made by the community. Holders shape the future of OPC together.
+                    </p>
+                </div>
+                <div class="feature-card bg-gray-50 rounded-lg p-8 text-center shadow hover:shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <i class="fa-solid fa-anchor text-yellow-500 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Inspired by Adventure</h3>
+                    <p class="text-gray-600">
+                        OPC celebrates the spirit of adventure and friendship, uniting fans on a journey to find the ultimate treasure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tokenomics Section -->
+    <section id="tokenomics" class="py-20 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl">
+                    Tokenomics
+                </h2>
+                <p class="mt-4 text-lg leading-7 text-gray-600">
+                    Transparent and simple. OPC is designed for fairness and community empowerment.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-8 text-center shadow">
+                    <div class="flex justify-center mb-4">
+                        <i class="fa-solid fa-coins text-yellow-500 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Total Supply</h3>
+                    <p class="text-gray-600">250,000,000,000 OPC</p>
+                </div>
+                <div class="bg-white rounded-lg p-8 text-center shadow">
+                    <div class="flex justify-center mb-4">
+                        <i class="fa-solid fa-water text-yellow-500 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Liquidity</h3>
+                    <p class="text-gray-600">100% of supply added to liquidity. No team or dev wallet.</p>
+                </div>
+                <div class="bg-white rounded-lg p-8 text-center shadow">
+                    <div class="flex justify-center mb-4">
+                        <i class="fa-solid fa-lock text-yellow-500 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Liquidity Locked</h3>
+                    <p class="text-gray-600">Liquidity is locked to ensure safety and trust.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy Section -->
+    <section id="howtobuy" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl">
+                    How to Buy OPC
+                </h2>
+                <p class="mt-4 text-lg leading-7 text-gray-600">
+                    Join the adventure in just a few steps!
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-gray-50 rounded-lg p-8 text-center shadow hover:shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <i class="fa-solid fa-wallet text-yellow-500 text-4xl step-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">1. Get a Wallet</h3>
+                    <p class="text-gray-600">
+                        Download a crypto wallet like MetaMask or Trust Wallet and set it up.
+                    </p>
+                </div>
+                <div class="feature-card bg-gray-50 rounded-lg p-8 text-center shadow hover:shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <i class="fa-solid fa-arrow-right-arrow-left text-yellow-500 text-4xl step-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">2. Add BNB</h3>
+                    <p class="text-gray-600">
+                        Fund your wallet with BNB (Binance Smart Chain) for swapping.
+                    </p>
+                </div>
+                <div class="feature-card bg-gray-50 rounded-lg p-8 text-center shadow hover:shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <i class="fa-solid fa-cart-shopping text-yellow-500 text-4xl step-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">3. Swap for OPC</h3>
+                    <p class="text-gray-600">
+                        Go to <a href="https://pancakeswap.finance/swap?outputCurrency=0xSEU_CONTRATO" class="text-yellow-500 underline" target="_blank">PancakeSwap</a>, paste the OPC contract address, and swap BNB for OPC.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer Section -->
+    <section id="disclaimer" class="py-16 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Disclaimer</h2>
+            <p class="text-gray-600 text-center">
+                OPC is a community-driven meme coin created for entertainment and community engagement. It is not financial advice or an investment. Please do your own research before participating. OPC is not affiliated with any official brands or entities.
+            </p>
+        </div>
+    </section>
+    <!-- Quote Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-2xl md:text-3xl font-medium text-yellow-500 italic">
+                "Power isn't determined by your size, but by the size of your heart and dreams."
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <div class="flex items-center">
+                        <div class="logo-container footer-logo mr-2">
+                            <div class="rotating-logo">
+                                <div class="logo-3d">
+                                    <img src="imagem/logo-opc.png" alt="Logo OPC" class="face frente" />
+                                    <img src="imagem/logo-opc.png" alt="Logo OPC" class="face verso" />
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-yellow-500 font-bold text-xl">OPC</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Made by fans, for fans. Not affiliated with official brands.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8">
+                <p class="text-base text-gray-400 text-center">
+                    © OPC 2025. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Pause logo animation on hover
+        document.querySelectorAll('.rotating-logo, .logo-3d').forEach(logo => {
+            logo.addEventListener('mouseover', () => {
+                logo.style.animationPlayState = 'paused';
+            });
+            logo.addEventListener('mouseout', () => {
+                logo.style.animationPlayState = 'running';
+            });
+        });
+    </script>
+</body>
+</html>
